@@ -42,6 +42,8 @@ http://example.org/api/1.0.0/db/action/tablelist.html?key=47f9c163985a224c8fe60c
 
 Die meisten Abfragen beginnen mit dem Aufruf einer Aktion */action/* gefolgt von dem Namen der Aktion. Eine Auflistung der möglichen Aktionen ist den folgenden Beispielen zu entnehmen.
 
+**Die Parameter werden vor der Verwendung mit urldecode() Dekodiert! Sie müssen beim Erstellen der URL entsprechend Kodiert werden!**
+
 **Bei den folgenden Beispielen wird der übersichlichkeithalber der Anfang der URL, sowie der Key weggelassen!**
 
 ### Tabellenliste
