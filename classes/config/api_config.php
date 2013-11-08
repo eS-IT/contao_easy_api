@@ -206,7 +206,7 @@ class api_config {
 
         if($intKey !== false && isset($this->arrFragments[$intKey])){
             // Wert direkt in $this->arrSchema definiert!
-            return $this->arrFragments[$intKey];
+            return urldecode($this->arrFragments[$intKey]);
         }
 
         return false;
@@ -222,7 +222,7 @@ class api_config {
         $intPos = array_search($strKey, $this->arrFragments);
 
         if($intPos !== false){
-            return $this->arrFragments[$intPos+1];
+            return urldecode($this->arrFragments[$intPos+1]);
         }
 
         return false;
