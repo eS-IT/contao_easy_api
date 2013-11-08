@@ -1,0 +1,10 @@
+<div class="tl_buttons" style="padding: 10px; text-align: right">
+    <a title="<?php echo $GLOBALS['TL_LANG']['MSC']['back']; ?>" href="javascript:history.go(-1)" class="header_back" onclick="Backend.getScrollOffset()" accesskey="b"><?php echo $GLOBALS['TL_LANG']['MSC']['back']; ?></a>
+</div>
+<h2 class="sub_headline"><?php echo $this->strKeyHeadline; ?></h2>
+<div style="margin: 20px;">
+    <?php echo $this->strDescription; ?>
+</div>
+<div style='padding: 10px; margin: 10px 10px 10px 20px; background-color: #eee; font-family: mono; width: 350px; border: 1px solid #bbb'>
+    <?php echo chunk_split($this->strKey, 50, '<br />'); ?>
+</div>
