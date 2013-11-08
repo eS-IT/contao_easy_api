@@ -1,30 +1,30 @@
 Contao_e@sy_API
 ===============
 
-# About
+## About
 
 e@sy-API ist eine RESTfull-API für das Open Source CMS Contao. Die Schnittstelle bietet direkten Zugriff auf die Dantenbank einer Contao-Installation. Da die Datenquellen über eigene Klassen realisiert werden, ist es problemlos möglich auch andere Quellen hinzuzufügen, z.B. das Dateisystem. Die API liefert ein JSON-String mit dem Ergebniss der Anfrage oder einer Fehlermeldung zurück. Bei Fehlern wird auch ein entsprechender HTTP-Error-Code übermittlet. Die Daten befinden sich in der Regel im Feld "data" der zurück gelieferten Arrays. Als Ausgabeformat ist der Zeit nur JSON implementiert, es ist aber problemlos möglich z.B. XML einzubauen, da die Konvertierung in das Ausgabeformat durch Hooks geschieht.
 
 Die API folgt den allgemeinen Maßgeaben für RESTfull-APIs, mit GET-Statements werden Daten abgerufen, mit DELETE gelöscht, mit POST erstellt und mit PUT aktualisiert. Da sich in Tests gezeigt hat, dass es mit der PUT-Methode zu Schwirigkeiten kommen kann, können Datensätze auch mit POST aktualisiert werden. Hier zu wird einfach die ID in den POST-Daten mit übergeben. Soll ein neuer Datensatz angeleget werden, wird die ID weggelassen.
 
-# Sicherheit
+## Sicherheit
 
 Gesichert wird der Zugriff durch einen API-Key, außerdem werden bei Fehlerhaften Zugriffen die IP geloggt und nach drei Versuchen (Anzahl einstellbar) gespeert. Über den Key kann auch festgelegt werden, welche Methoden mit dem Key benutzt werden dürfen, so kann z.B. ein read-only-Key erzeugt werden, oder ein Key der nur Lesen und Aktulisieren, aber nicht Löschen oder Datensätze anlegen darf. Zusätzlich können die Tabellen festgelegt werden, auf die mit dem Key zugegriffen werden darf.
 
 Es wird empfohlen die API über HTTPS zu nutzen, dies ist aber nicht zwingend.
 
-# System requirements
+## System requirements
 
  * Contao Open Souce CMS >= 3.1.0 stable
 
 
-# Installation
+## Installation
 
  * Einfach die Erweiterung unter TL_ROOT/system/modules speichern
  * Einen Key anlegen
 
 
-# Zugriff auf die API
+## Zugriff auf die API
 
 Die URL für die Zugriff auf die API muss am Anfang folgende Standardparameter aufweisen:
 
@@ -44,7 +44,7 @@ Die meisten Abfragen beginnen mit dem Aufruf einer Aktion */action/* gefolgt von
 
 **Bei den folgenden Beispielen wird der übersichlichkeithalber der Anfang der URL, sowie der Key weggelassen!**
 
-## Tabellenliste
+### Tabellenliste
 
 **action/tablelist.html**
 
@@ -58,7 +58,7 @@ Hiermit wird eine Liste aller Tabellen ausgegeben, auf die mit dem verwendeten K
 }
 ```
 
-## Fieldlist
+### Fieldlist
 
 **/action/fieldlist/table/tl_user.html**
 
@@ -77,7 +77,7 @@ Gibt eine Liste der Felder der Tabelle, inkl. Informationen zu den Feldern zurü
 }
 ```
 
-## Ids einer Tabelle
+### Ids einer Tabelle
 
 **/action/idlist/table/tl_user.html**
 
@@ -91,7 +91,7 @@ Gibt eine Liste aller Ids einer Tabelle zurück.
 }
 ```
 
-## Datensatz einer Tabelle
+### Datensatz einer Tabelle
 
 **/action/details/table/tl_user/id/1.html**
 
@@ -105,7 +105,7 @@ Gibt einen Datensatz zurück.
 }
 ```
 
-## Mehrere Datensätz laden
+### Mehrere Datensätz laden
 
 **/action/details/table/tl_member/city/Werne/login/1.html**
 
