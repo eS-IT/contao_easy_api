@@ -1,5 +1,4 @@
-Contao_e@sy_API
-===============
+# [DEPRECATED] Contao_e@sy_API
 
 ## About
 
